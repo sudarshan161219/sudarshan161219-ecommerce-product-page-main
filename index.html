@@ -1,0 +1,224 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+   <title>Frontend Mentor | E-commerce product page</title>
+
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+   <!-- styles -->
+   <link rel="stylesheet" href="styles.css">
+   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+   <style>
+     .attribution {
+       font-size: 11px;
+       text-align: center;
+     }
+
+     .attribution a {
+       color: hsl(228, 45%, 44%);
+     }
+   </style>
+ </head>
+
+ <body>
+   <main class="container">
+     <nav>
+       <div class="nav-left">
+         <img class="menu" src="images/icon-menu.svg" alt="icon-menu">
+         <img class="logo" src="images/logo.svg" alt="logo">
+       </div>
+       <div class="nav-right">
+         <div class="add-to-cart"></div>
+         <img class="cart" src="images/icon-cart.svg" alt="icon-cart">
+         <img class="avatar" src="images/image-avatar.png" alt="avatar">
+       </div>
+
+       <div class="sidebar-background">
+       </div>
+
+       <div class="sidebar">
+         <div class="sidebar-header">
+           <div class="close-btn">
+
+             <img class="close" src="images/icon-close.svg" alt="close-icon">
+
+
+           </div>
+
+         </div>
+         <div class="sidebar-container">
+           <div class="side-menu">
+
+             <ul class="dropdown-content">
+               <li> <span> Collections </span> </li>
+               <li> <span>Men</span></li>
+               <li> <span> Women</span> </li>
+               <li> <span>About</span> </li>
+               <li> <span>Contact</span> </li>
+             </ul>
+
+           </div>
+
+
+         </div>
+
+       </div>
+
+
+     </nav>
+
+     <aside class="slider">
+
+
+       <div class="slider-container">
+
+         <div class="slide">
+           <img class="product-img  product-img-1" src="images/image-product-1.jpg" alt="product-img">
+
+         </div>
+
+         <div class="slide">
+           <img class="product-img product-img-2" src="images/image-product-2.jpg" alt="product-img">
+
+         </div>
+
+         <div class="slide">
+           <img class="product-img product-img-3" src="images/image-product-3.jpg" alt="product-img">
+
+         </div>
+
+         <div class="slide">
+
+           <img class="product-img product-img-4" src="images/image-product-4.jpg" alt="product-img">
+
+
+         </div>
+
+       </div>
+
+
+       <!-- <div class="order"> -->
+
+       <div class="next-prev">
+         <div>
+           <img class="previous" src="images/icon-previous.svg" alt="previous">
+         </div>
+         <div>
+           <img class="next" src="images/icon-next.svg" alt="next">
+         </div>
+       </div>
+       <!-- </div> -->
+
+<div class="card-one">
+
+       <div class="card">
+
+         <div class="content">
+           <p class="span">Sneaker Company</p>
+           <h2 class="heading">Fall Limited Edition <br> Sneakers</h2>
+           <p class="Paragraph">These low-profile sneakers are your perfect casual wear companion. Featuring a
+             durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+           <div class="price">
+             <div class="price-2">
+               <h3 class="price-heading">$125.00</h3>
+               <p class="span-2">50%</p>
+             </div>
+
+             <p class="price-Paragraph">$250.00</p>
+           </div>
+           <div class="bottom-content">
+             <div class="plus-minu">
+               <div>
+                 <img class="minus" src="images/icon-minus.svg" alt="remove">
+               </div>
+
+               <div class="text-value">
+                 <p>0</p>
+               </div>
+               <div>
+                 <img class="plus" src="images/icon-plus.svg" alt="add">
+               </div>
+
+             </div>
+             <button value="125.00" class="bottom-cart">
+               <img class="cart-img" src="images/icon-cart.svg" alt="cart">
+               <span class="add-cart">Add to cart</span>
+             </button>
+           </div>
+
+         </div>
+
+
+
+
+         <div class="checkout">
+           <!-- <p class="text-checkout">Your cart is empty.</p> -->
+           <div class="checkout-card">
+             <p class="checkout-text">Cart</p>
+             <div></div>
+             <hr>
+             <div class="text-container">
+               <p class="empty-text"> Your cart is empty.</p>
+             </div>
+             <div class="checkout-div-2">
+
+
+
+               <div class="checkout-div">
+
+                 <img class="checkout-img" src="images/image-product-1-thumbnail.jpg" alt="thumbnail">
+                 <div>
+                   <p>Autumn Limited Edition...</p>
+                   <div class="checkout-text">
+
+
+                     <p class="checkout-text-Paragraph"></p>
+                     <p class="checkout-text-Paragraph-2"></p>
+                   </div>
+                 </div>
+
+
+
+                 <div>
+                   <img class="delete" src="images/icon-delete.svg" alt="delete">
+                 </div>
+
+               </div>
+               <button value="125.00" class="bottom-cart">
+                 <span class="checkout-btn">Checkout</span>
+               </button>
+             </div>
+
+           </div>
+
+         </div>
+
+
+
+       </div>
+
+     </div>
+
+</aside>
+
+
+   </main>
+
+
+   <script src="app.js"></script>
+   <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+ </body>
+
+ </html>
