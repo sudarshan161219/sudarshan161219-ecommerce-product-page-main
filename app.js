@@ -50,74 +50,71 @@ const productThumbnailmodal4 = document.querySelector('.product-thumbnail-modal-
 const deleteBtn = document.querySelector('.delete');
 const empty = document.querySelector('.text-container');
 
-// const value = addCart.value;
-// const id = new Date().getTime().toString();
 
-// sidebar
-menu.addEventListener("click", function () {
-   sidebar.classList.toggle("show-sidebar");
-   backgroundSidebar.classList.toggle("show-sidebar-background");
+menu.addEventListener("click", function() {
+  sidebar.classList.toggle("show-sidebar");
+  backgroundSidebar.classList.toggle("show-sidebar-background");
 });
 
-close.addEventListener("click", function () {
-   sidebar.classList.remove("show-sidebar");
-   backgroundSidebar.classList.remove("show-sidebar-background");
+close.addEventListener("click", function() {
+  sidebar.classList.remove("show-sidebar");
+  backgroundSidebar.classList.remove("show-sidebar-background");
 });
 
-slides.forEach(function (slide, index) {
-   slide.style.left = `${index * 100}%`;
+slides.forEach(function(slide, index) {
+  slide.style.left = `${index * 100}%`;
 });
 
-modalSlides.forEach(function (slide, index) {
-   slide.style.left = `${index * 100}%`;
+modalSlides.forEach(function(slide, index) {
+  slide.style.left = `${index * 100}%`;
 });
 
 
-productThumbnail1.addEventListener("click", function () {
-   counter = 0;
-   carousel()
+productThumbnail1.addEventListener("click", function() {
+  counter = 0;
+  carousel()
 });
 
 
-productThumbnail2.addEventListener("click", function () {
-   counter = 1;
-   carousel()
+productThumbnail2.addEventListener("click", function() {
+  counter = 1;
+  carousel()
 });
 
 
-productThumbnail3.addEventListener("click", function () {
-   counter = 2;
-   carousel()
+productThumbnail3.addEventListener("click", function() {
+  counter = 2;
+  carousel()
 });
 
 
-productThumbnail4.addEventListener("click", function () {
-   counter = 3;
-   carousel()
+productThumbnail4.addEventListener("click", function() {
+  counter = 3;
+  carousel()
 });
 
 
-productThumbnailmodal1.addEventListener("click", function () {
-   counter = 0;
-   carouselDesktop()
+productThumbnailmodal1.addEventListener("click", function() {
+  counter = 0;
+  carouselDesktop()
 });
 
 
-productThumbnailmodal2.addEventListener("click", function () {
-   counter = 1;
-   carouselDesktop()
+productThumbnailmodal2.addEventListener("click", function() {
+  counter = 1;
+  carouselDesktop()
 });
 
 
-productThumbnailmodal3.addEventListener("click", function () {
-   counter = 2;
-   carouselDesktop()
+productThumbnailmodal3.addEventListener("click", function() {
+  counter = 2;
+  carouselDesktop()
 });
 
 
-productThumbnailmodal4.addEventListener("click", function () {
-   counter = 3;
-   carouselDesktop()
+productThumbnailmodal4.addEventListener("click", function() {
+  counter = 3;
+  carouselDesktop()
 });
 
 
@@ -125,181 +122,127 @@ productThumbnailmodal4.addEventListener("click", function () {
 
 
 let counter = 0;
-nextBtn.forEach(function (next) {
-   next.addEventListener("click", function () {
-      counter++;
-      carousel();
-   });
+nextBtn.forEach(function(next) {
+  next.addEventListener("click", function() {
+    counter++;
+    carousel();
+  });
 });
 
 
-prevBtn.forEach(function (previous) {
-   previous.addEventListener("click", function () {
-      counter--;
-      carousel();
-   });
+prevBtn.forEach(function(previous) {
+  previous.addEventListener("click", function() {
+    counter--;
+    carousel();
+  });
 });
 
 
 // product image carousel desktop next and previous button
 
-desktopNext.forEach(function (nextDesktop) {
-   nextDesktop.addEventListener("click", function () {
-      counter++;
-      carouselDesktop()
-   });
+desktopNext.forEach(function(nextDesktop) {
+  nextDesktop.addEventListener("click", function() {
+    counter++;
+    carouselDesktop()
+  });
 });
 
 
-desktopPrev.forEach(function (previousDesktop) {
-   previousDesktop.addEventListener("click", function () {
-      counter--;
-      carouselDesktop()
-   });
+desktopPrev.forEach(function(previousDesktop) {
+  previousDesktop.addEventListener("click", function() {
+    counter--;
+    carouselDesktop()
+  });
 });
 
 
 // product image carousel
 function carousel() {
-   if (counter === slides.length) {
-      counter = 0;
-   }
-   if (counter < 0) {
-      counter = slides.length - 1;
-   }
-   slides.forEach(function (slide) {
-      slide.style.transform = `translateX(-${counter * 100}%)`
-   });
+  if (counter === slides.length) {
+    counter = 0;
+  }
+  if (counter < 0) {
+    counter = slides.length - 1;
+  }
+  slides.forEach(function(slide) {
+    slide.style.transform = `translateX(-${counter * 100}%)`
+  });
 }
 
 
 // product image Desktop carousel
 function carouselDesktop() {
-   if (counter === modalSlides.length) {
-      counter = 0;
-   }
-   if (counter < 0) {
-      counter = modalSlides.length - 1;
-   }
-   modalSlides.forEach(function (slide) {
-      slide.style.transform = `translateX(-${counter * 100}%)`
-   });
+  if (counter === modalSlides.length) {
+    counter = 0;
+  }
+  if (counter < 0) {
+    counter = modalSlides.length - 1;
+  }
+  modalSlides.forEach(function(slide) {
+    slide.style.transform = `translateX(-${counter * 100}%)`
+  });
 }
 
 
 // increment and decrement button
 var data = 0;
-plus.addEventListener("click", function () {
-   data = data + 1;
-   textValue.textContent = data
+plus.addEventListener("click", function() {
+  data = data + 1;
+  textValue.textContent = data
 
 });
 
 
-minus.addEventListener("click", function () {
-   data = data - 1;
-   textValue.textContent = data;
-   if (data < 0) {
-      textValue.textContent = 0;
-   }
+minus.addEventListener("click", function() {
+  data = data - 1;
+  textValue.textContent = data;
+  if (data < 0) {
+    textValue.textContent = 0;
+  }
 
 });
 
 
 // working with add to cart
-bottomCart.addEventListener("click", function () {
-   addCart.textContent = data;
-   empty.style.display = "none";
+bottomCart.addEventListener("click", function() {
+  addCart.textContent = data;
+  empty.style.display = "none";
+  data < 1 ? (addCart.style.display = "none", checkOutDiv.style.display = "none") : (addCart.style.display = "block", checkOutDiv.style.display = "contents")
 
-   if (data < 1) {
-      addCart.style.display = "none";
-      checkOutDiv.style.display = "none"
+  checkoutText_1.textContent = `$125.00 x ${data}`
+  checkoutText_2.textContent = `$ ${125 * data} .00`
 
-   } else {
-      addCart.style.display = "block";
-      checkOutDiv.style.display = "contents";
-   }
-
-   checkoutText_1.textContent = "$125.00" + " x " + data
-   checkoutText_2.textContent = "$" + 125 * data + ".00"
-
-   if (data === 1) {
-      checkoutText_1.textContent = "$125.00 "
-      checkoutText_2.textContent = ""
-   } else {
-      checkoutText_1.textContent = "$125.00" + " x " + data
-      checkoutText_2.textContent = "$" + 125 * data + ".00"
-   }
+  data === 1 ? (checkoutText_1.textContent = "$125.00 ", checkoutText_2.textContent = "") :
+    (checkoutText_1.textContent = `$125.00 x ${data}`, checkoutText_2.textContent = `$ ${125 * data} .00`)
 
 });
 
 // working with cart checkout
-cart.addEventListener("click", function () {
-   checkout.classList.toggle("show-checkout");
-
-   if (data === 0) {
-      // checkout.style.display = "block"
-      checkOutDiv.style.display = "none"
-      empty.style.display = "block";
-   }
+cart.addEventListener("click", function() {
+  checkout.classList.toggle("show-checkout");
+  data === 0 ? (checkOutDiv.style.display = "none", empty.style.display = "block") : 0
 });
 
 
 // working with delete button
-deleteBtn.addEventListener("click", function () {
-   checkOutDiv.style.display = "none";
-   empty.style.display = "block";
-
-
-   if (data || data < 0) {
-      addCart.style.display = "none"
-
-   } else {
-      addCart.style.display = "block"
-   }
-
-   if (cart.on) {
-      checkOutDiv.style.display = "none"
-      empty.style.display = "block";
-   }
-
+deleteBtn.addEventListener("click", function() {
+  checkOutDiv.style.display = "none";
+  empty.style.display = "block";
+  data || data < 0 ? addCart.style.display = "none" : addCart.style.display = "block"
+  cart.on ? (checkOutDiv.style.display = "none", empty.style.display = "block") : (0)
 });
 
 
 // working with modal
-productImg.forEach(function (e) {
-   e.addEventListener("click", function () {
-      modal.classList.add("open-modal");
-      backgroundModal.classList.add("show-modal-background");
-   })
+productImg.forEach(function(e) {
+  e.addEventListener("click", function() {
+    modal.classList.add("open-modal");
+    backgroundModal.classList.add("show-modal-background");
+  })
 });
 
 
-close_2.addEventListener("click", function () {
-   modal.classList.remove("open-modal");
-   backgroundModal.classList.remove("show-modal-background");
+close_2.addEventListener("click", function() {
+  modal.classList.remove("open-modal");
+  backgroundModal.classList.remove("show-modal-background");
 });
-
-
-// function addtoLocalStorage(id, value) {
-//    const data = {
-//       id: id,
-//       value: value
-//    };
-//    let items = getLocalStorage()
-//
-//    console.log(items);
-//
-//    items.push(data);
-//    localStorage.setItem("list", JSON.stringify(items))
-// }
-//
-//
-// function getLocalStorage() {
-//    return localStorage.getItem("list") ? JSON.parse(localStorage.getItem("list")) : [];
-//
-// }
-// window.addEventListener('DOMContentLoaded', (event) => {
-//    console.log(data);
-//    localStorage.setItem(addCart, data);
-// });
